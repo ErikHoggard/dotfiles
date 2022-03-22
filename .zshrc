@@ -106,10 +106,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias ll="ls -laG"
+
+#norns stop/start
 alias stopn="~/norns/stop.sh"
 alias startn="~/norns/start.sh"
+#remote norns commands
 alias matron="/home/we/norns/build/maiden-repl/maiden-repl"
+alias dust="cd /Users/mbp && sshfs we@norns:/home/we/dust dust"
+alias norns="cd /Users/mbp && sshfs we@norns:/home/we norns"
+alias jkill="kill $(ps ax | grep 'jekyll' | grep -v grep | awk '{print $1}')"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
