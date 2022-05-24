@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -114,11 +114,12 @@ alias stopn="~/norns/stop.sh"
 alias startn="~/norns/start.sh"
 #remote norns commands
 alias matron="/home/we/norns/build/maiden-repl/maiden-repl"
-alias dust="cd /Users/mbp && sshfs we@norns:/home/we/dust dust"
-alias norns="cd /Users/mbp && sshfs we@norns:/home/we norns"
+alias dust="cd /home/erik && sshfs we@norns:/home/we/dust dust"
+alias norns="cd /home/erik && sshfs we@norns:/home/we norns"
 alias jkill="kill $(ps ax | grep 'jekyll' | grep -v grep | awk '{print $1}')"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias dotfiles='/usr/bin/git --git-dir=/home/we/.dotfiles/ --work-tree=/home/we'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+source ~/powerlevel10k/powerlevel10k.zsh-theme
